@@ -1,21 +1,29 @@
 from django.urls import path
-# views.pyとurls.pyは同じディレクトリに存在しているため「from . 」（カレントディレクトリからImportする
 from . import views
+# from django.contrib.auth.models import User
 
-app_name = 'analysis'  # analysisという名前空間の中にあるものを，htmlから呼び出しがあると，それに対応したviews.pyを引き出す
-
-# 全体のURLパスは
-# 親のurls.pyの定義 |    アプリケーションのurls.pyの定義  になる
-# 一番上はhttp://127.0.0.1/analysis/analysis_list/になる
+# analysisという名前空間を設定
+app_name = 'analysis'
 
 urlpatterns = [
+    # ログイン画面
     path('top/', views.topview, name='topview'),
+    # 管理者用の一覧画面
     path('analysis_list/', views.AnalysisListView.as_view(), name='analysis_list'),
-    path('analysis_create/', views.AnalysisCreateView.as_view(), name='analysis_create'),
+    # 新規登録：ユーザー名，パスワード等画面
+    path('register_create/', views.AnalysisRegisterView.as_view(), name='register_create'),
+    # ユーザ登録完了画面
+    path('register_done/', views.register_done, name='register_done'),
+    # 新規登録：個人情報を登録する画面
+    path('analysis_create/<int:pk>/', views.AnalysisCreateView.as_view(), name='analysis_create'),
+    # 新規登録完了画面
     path('create_done/', views.create_done, name='create_done'),
+    # 更新画面
     path('update/<int:pk>/', views.AnalysisUpdateView.as_view(), name='analysis_update'),
+    # 更新完了画面
     path('update_done/', views.update_done, name='update_done'),
+    # 削除画面
     path('delete/<int:pk>/', views.AnalysisDeleteView.as_view(), name='analysis_delete'),
+    # 削除完了画面
     path('delete_done/', views.delete_done, name='delete_done'),
-
 ]
