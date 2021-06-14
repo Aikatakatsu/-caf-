@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+
+{% block titele %}ログイン{% endblock %}
+
+{% block content %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><a href="{% url 'password_reset' %}">パスワードを忘れた</a></p>
+<!--        <button type="submit" class="btn btn-primary">ログイン</button>-->
+        <a class="btn btn-primary" href="{% url 'analysis:analysis_list'%}">ログイン</a>
+        <a class="btn btn-success" href="{% url 'analysis:analysis_create'%}">新規追加＋</a>
+    </form>
+</div>
+{% endblock %}

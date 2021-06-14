@@ -121,3 +121,11 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# aika
+# ログインしていないときのリダイレクト先
+LOGIN_URL = 'login'
+# ログイン後のリダイレクト先
+LOGIN_REDIRECT_URL = 'index'
+# ログアウト後のリダイレクト先
+LOGOUT_REDIRECT_URL = 'index'

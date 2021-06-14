@@ -17,5 +17,8 @@ urlpatterns = [
     path('update_done/', views.update_done, name='update_done'),
     path('delete/<int:pk>/', views.AnalysisDeleteView.as_view(), name='analysis_delete'),
     path('delete_done/', views.delete_done, name='delete_done'),
-
+    # path('login/', views.MyLoginView.as_view(), name="login"),
+    # path('logout/', views.MyLogoutView.as_view(), name="logout"),
+    # path('index/',views.IndexView.as_view(), name="index"),
+#     aika
 ]

@@ -1,7 +1,7 @@
 from django import forms
 from .models import Job, Purpose, Trigger, UserProfile
 import bootstrap_datepicker_plus as datetimepicker
-
+from django.contrib.auth import forms as auth_forms
 
 class AnalysisForm(forms.ModelForm):
     """
@@ -20,3 +20,10 @@ class AnalysisForm(forms.ModelForm):
                 }
             ),
         }
+
+class LoginForm(auth_forms.AuthenticationForm):
+    '''ログインフォーム'''
+    def __init__(self, *args, **kw):
+        super().__init__(*args, **kw)
+        for field in self.fields.values():
+            field.widget.attrs['placeholder'] = field.label

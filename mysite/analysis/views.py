@@ -3,6 +3,12 @@ from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from .models import Job, Purpose, Trigger, UserProfile
 from .forms import AnalysisForm
 from django.urls import reverse_lazy
+# aika
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView
+from . import forms
+
 
 class AnalysisListView(ListView):
     model = UserProfile
@@ -40,3 +46,14 @@ def delete_done(request):
 
 def topview(request):
     return render(request, 'analysis/top.html')
+
+# aika
+class MyLoginView(LoginView):
+    form_class = forms.LoginForm
+    template_name = "analysis/login.html"
+
+class MyLogoutView(LoginRequiredMixin, LogoutView):
+    template_name = "analysis/logout.html"
+
+class IndexView(TemplateView):
+    template_name = "analysis/index.html"
