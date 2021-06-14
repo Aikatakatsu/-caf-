@@ -1,5 +1,5 @@
 from django import forms
-from .models import Analysis
+from .models import Job, Purpose, Trigger, UserProfile
 import bootstrap_datepicker_plus as datetimepicker
 
 
@@ -9,10 +9,10 @@ class AnalysisForm(forms.ModelForm):
     """
 
     class Meta:
-        model = Analysis
-        fields = ['date', 'category', 'money', 'memo']
+        model = UserProfile
+        fields = ['name', 'location', 'phone', 'job', 'gender', 'trigger', 'purpose', 'birth_date', 'arrive_time']
         widgets = {
-            'date': datetimepicker.DatePickerInput(
+            'birth_date': datetimepicker.DatePickerInput(
                 format='%Y-%m-%d',
                 options={
                     'locale': 'ja',

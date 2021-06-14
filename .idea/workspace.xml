@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aad84f2-83e8-4119-826b-39fc8bb0052a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/migrations/0004_auto_20210611_1709.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="6aad84f2-83e8-4119-826b-39fc8bb0052a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

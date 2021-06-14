@@ -1,12 +1,9 @@
 from django.contrib import admin
-from .models import Category, Analysis
 
+# Register your models here.
+from .models import Job, Purpose, Trigger, UserProfile
 
-class AnalysisAdmin(admin.ModelAdmin):
-    list_display = ('date', 'category', 'money', 'memo')  # modelsで設定したカラム名
-
-
-
-
-admin.site.register(Category)
-admin.site.register(Analysis, AnalysisAdmin)
+admin.site.register(Job)
+admin.site.register(Purpose)
+admin.site.register(Trigger)
+admin.site.register(UserProfile)

@@ -1,16 +1,16 @@
 from django.shortcuts import render
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
-from .models import Category, Analysis
-from .forms import AnalysisForm  # forms .pyからAnalysisFormをインポート
+from .models import Job, Purpose, Trigger, UserProfile
+from .forms import AnalysisForm
 from django.urls import reverse_lazy
 
 class AnalysisListView(ListView):
-    model = Analysis
+    model = UserProfile
     template_name = 'analysis/analysis_list.html'
 
 
 class AnalysisCreateView(CreateView):
-    model = Analysis
+    model = UserProfile
     form_class = AnalysisForm
     success_url = reverse_lazy('analysis:create_done')
 
@@ -19,7 +19,7 @@ def create_done(request):
 
 
 class AnalysisUpdateView(UpdateView):
-    model = Analysis
+    model = UserProfile
     form_class = AnalysisForm
     success_url = reverse_lazy('analysis:update_done')
 
@@ -29,7 +29,7 @@ def update_done(request):
 
 class AnalysisDeleteView(DeleteView):
     # 利用するモデルを指定
-    model = Analysis
+    model = UserProfile
     # 削除処理が正常終了した場合の遷移先を指定
     success_url = reverse_lazy('analysis:delete_done')
 

@@ -3,17 +3,22 @@
 {% block content %}
 <div class="content-wrapper">
     <div class="container-fluid">
+
         <!-- パンくずリストの設定-->
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{% url 'analysis:analysis_list' %}">TOP</a>
+                ログイン画面
             </li>
-            <li class="breadcrumb-item active">管理画面（一覧表示）</li>
+            <li class="breadcrumb-item active">
+                管理者画面（情報一覧）
+            </li>
         </ol>
+
         <!--ページタイトル-->
         <div class="card mb-3">
             <div class="card-header">
-                <h3><b>hogehogeアプリ</b></h3>
+                <h3><b>登録情報分析管理アプリ</b></h3>
+                <h3>管理者画面（情報一覧）</h3>
                 <a class="btn btn-success" href="{% url 'analysis:analysis_create'%}">新規追加＋</a>
             </div>
             <div class="card-body">
@@ -23,10 +28,16 @@
                         　<!-- 表の列の定義-->
                         <thead>
                         <tr>
-                            <th class="text-center">日付</th>
-                            <th class="text-center">カテゴリ</th>
-                            <th class="text-center">金額</th>
-                            <th class="text-center">メモ</th>
+                            <th class="text-center">ユーザID</th>
+                            <th class="text-center">名前</th>
+                            <th class="text-center">生年月日</th>
+                            <th class="text-center">性別</th>
+                            <th class="text-center">入会日</th>
+                            <th class="text-center">退会日</th>
+                            <th class="text-center">住所</th>
+                            <th class="text-center">電話番号</th>
+                            <th class="text-center">目的</th>
+                            <th class="text-center">きっかけ</th>
                             <th class="text-center">更新・削除</th>
                         </tr>
                         </thead>
@@ -35,10 +46,16 @@
                         <tbody>
                         {% for item in object_list %}
                         <tr class="odd gradeX text-center">
-                            <td class="text-center" width="100">{{ item.date}}</td>
-                            <td class="text-center" width="100">{{ item.category }}</td>
-                            <td class="text-center" width="140">{{ item.money }}</td>
-                            <td class="text-center" width="140">{{ item.memo }}</td>
+                            <td class="text-center" width="100">{{ item.user_id}}</td>
+                            <td class="text-center" width="100">{{ item.name }}</td>
+                            <td class="text-center" width="140">{{ item.birth_date }}</td>
+                            <td class="text-center" width="140">{{ item.gender }}</td>
+                            <td class="text-center" width="140">{{ item.join_date }}</td>
+                            <td class="text-center" width="140">{{ item.stop_date }}</td>
+                            <td class="text-center" width="140">{{ item.location }}</td>
+                            <td class="text-center" width="140">{{ item.phone }}</td>
+                            <td class="text-center" width="140">{{ item.purpose }}</td>
+                            <td class="text-center" width="140">{{ item.trigger }}</td>
                             <td class="text-center" width="140">
                                 <a class="btn btn-primary" href="{% url 'analysis:analysis_update' item.pk %}">更新</a>
                                 <a class="btn btn-danger" href="{% url 'analysis:analysis_delete' item.pk %}">削除</a>
