@@ -1,0 +1,21 @@
+{% extends 'analysis/base.html' %}
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">ログイン画面</li>
+        </ol>
+
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-server"></i>
+                <b>ログイン・新規登録</b>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-primary" href="https://google.com">会員ログイン</a>
+                <a class="btn btn-primary" href="{% url 'analysis:analysis_list'%}">管理ログイン</a>
+                <a class="btn btn-danger" href="{% url 'analysis:analysis_create'%}">新規登録</a>
+{% endblock content %}

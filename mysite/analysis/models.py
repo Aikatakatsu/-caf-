@@ -1,52 +1,36 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
+from datetime import datetime
 
 
-# Create your models here.
+# 【カテゴリーテーブル】
+class Category(models.Model):
+    class Meta:  # ①
+        # テーブル名の指定
+        db_table = "category"
+        verbose_name = "カテゴリ"  # 追加
+        verbose_name_plural = "カテゴリ"  # 追加
 
-class Job(models.Model):
-    job_name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.job_name
-
-
-class Purpose(models.Model):
-    purpose_name = models.CharField(max_length=200)
+    # カラム名の定義
+    category_name = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
-        return self.purpose_name
+        return self.category_name
 
 
-class Trigger(models.Model):
-    trigger_name = models.CharField(max_length=200)
+# 【家計簿テーブル】
+class Analysis(models.Model):
+    class Meta:
+        # テーブル名
+        db_table = "kakeibo"
+        verbose_name = "家計簿"  # 追加
+        verbose_name_plural = "家計簿"  # 追加
 
-    def __str__(self):
-        return self.trigger_name
-
-
-GENDER_CHOICES = (
-    ("女性", "女性"),
-    ("男性", "男性"),
-)
-
-
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    name = models.CharField("名前", max_length=50, null=True)
-    location = models.CharField("住所", max_length=300, null=True)
-    phone = models.CharField("電話番号", max_length=255, null=True)
-    job = models.ForeignKey(Job, on_delete=models.CASCADE, null=True)
-    gender = models.CharField("性別", max_length=2, choices=GENDER_CHOICES, null=True)
-    trigger = models.ForeignKey(Trigger, on_delete=models.CASCADE, null=True)
-    purpose = models.ForeignKey(Purpose, on_delete=models.CASCADE, null=True)
-    birth_date = models.DateField("生年月日", null=True, blank=False)
-    join_date = models.DateField("入会日", null=True, blank=False)
-    stop_date = models.DateField("退会日", null=True, blank=True)
-    arrive_time = models.PositiveIntegerField("時間", blank=True, null=True)
+    # カラムの定義
+    date = models.DateField(verbose_name="日付", default=datetime.now)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name="カテゴリ")  # 外部キーとしてCategoryを設定
+    money = models.IntegerField(verbose_name="金額", help_text="※単位は日本円")
+    memo = models.CharField(verbose_name="メモ", max_length=500)
 
     def __str__(self):
-        return self.name
+        return self.memo
+
