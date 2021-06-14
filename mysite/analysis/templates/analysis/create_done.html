@@ -1,0 +1,30 @@
+{% extends 'analysis/base.html' %}
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'analysis:topview' %}">ログイン画面</a>
+            </li>
+            <li class="breadcrumb-item active">
+                新規登録画面
+            </li>
+            <li class="breadcrumb-item active">
+                新規登録完了画面
+            </li>
+        </ol>
+
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-server"></i>
+                <b>新規登録完了画面</b>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info" role="alert">
+                    データ登録が正常終了しました。
+                </div>
+                <a class="btn btn-danger" href="{% url 'analysis:topview'%}">ログイン画面へ戻る</a>
+{% endblock content %}
