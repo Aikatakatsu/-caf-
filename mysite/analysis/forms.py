@@ -2,13 +2,13 @@ from django import forms
 from django.db import models
 from .models import Job, Purpose, Trigger, UserProfile
 from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password, check_password
+from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 # 新規登録：ユーザー名，パスワード等画面
 class RegisterForm(forms.ModelForm):
-    username = forms.CharField(label="ユーザー名", max_length=100, null=False)
-    input_password = forms.CharField(label="パスワード", max_length=50, widget=forms.PasswordInput(), null=False)
-    email = forms.EmailField(label="メールアドレス", max_length=50, null=False)
+    username = forms.CharField(label="ユーザー名", max_length=100)
+    password = forms.CharField(label="パスワード", max_length=50, widget=forms.PasswordInput())
+    email = forms.EmailField(label="メールアドレス", max_length=50)
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
