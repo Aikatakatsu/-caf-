@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aad84f2-83e8-4119-826b-39fc8bb0052a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/analysis/templates/analysis/gender_circle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/templates/analysis/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/templates/analysis/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/analysis/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="6aad84f2-83e8-4119-826b-39fc8bb0052a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
