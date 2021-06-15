@@ -9,13 +9,13 @@ app_name = 'analysis'  # analysisという名前空間の中にあるものを�
 # 一番上はhttp://127.0.0.1/analysis/analysis_list/になる
 
 urlpatterns = [
-    path('top/', views.topview, name='topview'),
-    path('analysis_list/', views.AnalysisListView.as_view(), name='analysis_list'),
-    path('analysis_create/', views.AnalysisCreateView.as_view(), name='analysis_create'),
-    path('create_done/', views.create_done, name='create_done'),
-    path('update/<int:pk>/', views.AnalysisUpdateView.as_view(), name='analysis_update'),
-    path('update_done/', views.update_done, name='update_done'),
-    path('delete/<int:pk>/', views.AnalysisDeleteView.as_view(), name='analysis_delete'),
-    path('delete_done/', views.delete_done, name='delete_done'),
-
+	path('top/', views.topview, name='topview'),
+	path('analysis_list/', views.AnalysisListView.as_view(), name='analysis_list'),
+	path('analysis_create/', views.AnalysisCreateView.as_view(), name='analysis_create'),
+	path('create_done/', views.create_done, name='create_done'),
+	path('update/<int:pk>/', views.AnalysisUpdateView.as_view(), name='analysis_update'),
+	path('update_done/', views.update_done, name='update_done'),
+	path('delete/<int:pk>/', views.AnalysisDeleteView.as_view(), name='analysis_delete'),
+	path('delete_done/', views.delete_done, name='delete_done'),
+	path('circle/', views.show_gender_circle_graph, name='gender_circle'),
 ]
