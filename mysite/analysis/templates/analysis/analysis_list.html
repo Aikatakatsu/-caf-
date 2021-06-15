@@ -7,19 +7,28 @@
         <!-- パンくずリストの設定-->
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                ログイン画面
+                <a href="{% url 'analysis:topview' %}">ログアウト</a>
             </li>
             <li class="breadcrumb-item active">
-                管理者画面（情報一覧）
+                データ一覧
+            </li>
+            <li class="breadcrumb-item active">
+                円グラフ
+            </li>
+            <li class="breadcrumb-item active">
+                折れ線グラフ
+            </li>
+            <li class="breadcrumb-item active">
+                機械学習
             </li>
         </ol>
 
         <!--ページタイトル-->
         <div class="card mb-3">
             <div class="card-header">
-                <h3><b>登録情報分析管理アプリ</b></h3>
-                <h3>管理者画面（情報一覧）</h3>
-                <a class="btn btn-success" href="{% url 'analysis:analysis_create'%}">新規追加＋</a>
+                <h3><b>アドナビ！</b></h3>
+                <h3>管理者画面（データ一覧）</h3>
+                <a class="btn btn-success" href="{% url 'analysis:register_create'%}">新規追加＋</a>
             </div>
             <div class="card-body">
                 <!-- テーブル表の定義 -->

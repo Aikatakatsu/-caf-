@@ -5,8 +5,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<!--CSS-->
-<style>.form-group{padding: 100px;}</style>
 
 {% load bootstrap %}
 {% block content %}
@@ -18,34 +16,37 @@
 
                     <div class="container-fluid">
 
-                        <!-- パンくずリスト-->
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="{% url 'analysis:topview' %}">ログイン画面</a>
-                            </li>
-                            <li class="breadcrumb-item active">
-                                新規登録画面
-                            </li>
-                        </ol>
+<!--                        &lt;!&ndash; パンくずリスト&ndash;&gt;-->
+<!--                        <ol class="breadcrumb">-->
+<!--                            <li class="breadcrumb-item">-->
+<!--                                ログイン画面-->
+<!--                            </li>-->
+<!--                            <li class="breadcrumb-item active">-->
+<!--                                ユーザ登録画面-->
+<!--                            </li>-->
+<!--                            <li class="breadcrumb-item active">-->
+<!--                                個人情報登録画面-->
+<!--                            </li>-->
+<!--                        </ol>-->
 
                         <!-- 新規登録画面-->
                         <div class="card mb-3">
                             <div class="card-header">
                                 <i class="fa fa-server"></i>
-                                <h3>新規登録画面</h3>
+                                <h3>登録情報画面</h3>
+                                <p>個人情報を登録・編集してください</p>
                             </div>
                             <div class="card-body">
-
                                 {{ form|bootstrap }}
-                                {% block extrahead %} {{ form.media }} {% endblock %}
-
                             </div>
                         </div>
 
                         <!-- 列設定-->
                         <div class="row">
                             <div class="col-12">
-                                <button class="btn btn-primary">登録する</button>
+                                <div class="col text-center">
+                                    <button class="btn btn-primary">登録する</button>
+                                </div>
                             </div>
                         </div>
 
@@ -53,4 +54,11 @@
                     {% csrf_token %}
 </form>
 
+<!--縦が狭そうだったプルダウンをCSSで修正-->
+<style>
+#id_purpose, #id_job, #id_gender, #id_trigger{
+    width: 280px;
+    height: 32px;
+};
+</style>
 {% endblock %}

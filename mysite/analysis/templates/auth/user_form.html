@@ -1,0 +1,53 @@
+{% extends 'analysis/base.html' %}
+
+<!-- カレンダー入力の設定-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+{% load bootstrap %}
+{% block content %}
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content-wrapper">
+
+                    <div class="container-fluid">
+
+<!--                        &lt;!&ndash; パンくずリスト&ndash;&gt;-->
+<!--                        <ol class="breadcrumb">-->
+<!--                            <li class="breadcrumb-item">-->
+<!--                                ログイン画面-->
+<!--                            </li>-->
+<!--                            <li class="breadcrumb-item active">-->
+<!--                                ユーザ登録画面-->
+<!--                            </li>-->
+<!--                        </ol>-->
+
+                        <!-- 新規登録画面-->
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <i class="fa fa-server"></i>
+                                <h3>新規登録画面</h3>
+                                <p>ユーザー名・メールアドレス・パスワード</p>
+                            </div>
+                            <div class="card-body">
+                                {{ form|bootstrap }}
+                            </div>
+                        </div>
+
+                        <!-- 列設定-->
+                        <div class="row">
+                            <div class="col-12">
+                                <button class="btn btn-primary">登 録</button>
+                            </div>
+                        </div>
+
+                    </div><!--container-fluid-->
+
+                    {% csrf_token %}
+</form>
+
+{% endblock %}

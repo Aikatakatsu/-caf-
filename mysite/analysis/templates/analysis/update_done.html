@@ -3,24 +3,34 @@
 
 <div class="content-wrapper">
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="{% url 'analysis:analysis_list' %}">TOP</a>
-            </li>
-            <li class="breadcrumb-item active">
-                hogehogeアプリ
-            </li>
-        </ol>
+<!--        &lt;!&ndash; パンくずリスト&ndash;&gt;-->
+<!--        <ol class="breadcrumb">-->
+<!--            <li class="breadcrumb-item">-->
+<!--                ログイン画面-->
+<!--            </li>-->
+<!--            <li class="breadcrumb-item active">-->
+<!--                ユーザ登録画面-->
+<!--            </li>-->
+<!--            <li class="breadcrumb-item active">-->
+<!--                個人情報登録画面-->
+<!--            </li>-->
+<!--            <li class="breadcrumb-item active">-->
+<!--                個人情報登録完了画面-->
+<!--            </li>-->
+<!--        </ol>-->
+
 
         <!-- Example DataTables Card-->
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fa fa-server"></i>
-                <b>hogehogeアプリ</b>
+                <b>登録完了画面</b>
             </div>
             <div class="card-body">
                 <div class="alert alert-info" role="alert">
-                    データ更新処理が正常終了しました。
+                    データの登録が正常終了しました。
                 </div>
+                <a class="btn btn-primary" href="{% url 'analysis:analysis_create' pk=280 %}"><!--このpk=280は適当-->
+                    登録情報へ戻る
+                </a>
 {% endblock content %}
