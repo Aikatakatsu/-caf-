@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aad84f2-83e8-4119-826b-39fc8bb0052a" name="Default Changelist" comment="" />
+    <list default="true" id="6aad84f2-83e8-4119-826b-39fc8bb0052a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mysite/analysis/templates/analysis/gender_circle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/analysis/templates/analysis/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/templates/analysis/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/analysis/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/analysis/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/analysis/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,13 +36,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysite/analysis/templates/auth" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Owner\Documents\GitHub\-caf-\mysite\analysis\templates\auth" />
-      <recent name="C:\Users\Owner\Documents\GitHub\-caf-\mysite\analysis\templates\analysis" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
