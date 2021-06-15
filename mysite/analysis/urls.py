@@ -11,6 +11,7 @@ app_name = 'analysis'  # analysisという名前空間の中にあるものを�
 urlpatterns = [
     path('top/', views.topview, name='topview'),
     path('analysis_list/', views.AnalysisListView.as_view(), name='analysis_list'),
+    path('analysis_list/<int:pk>/', views.AnalysisListView.as_view(), name='analysis_list'),
     path('analysis_create/', views.AnalysisCreateView.as_view(), name='analysis_create'),
     path('create_done/', views.create_done, name='create_done'),
     path('update/<int:pk>/', views.AnalysisUpdateView.as_view(), name='analysis_update'),
@@ -22,3 +23,21 @@ urlpatterns = [
     # path('index/',views.IndexView.as_view(), name="index"),
 #     aika
 ]
+
+
+
+# app_name = 'accounts'
+#
+# urlpatterns = [
+#     path('login/', views.MyLoginView.as_view(), name="login"),
+#     path('logout/', views.MyLogoutView.as_view(), name="logout"),
+#     path('index/',views.IndexView.as_view(), name="index"),
+# ]
+# app_name = 'register'
+#
+# urlpatterns = [
+#     path('', views.UserList.as_view(), name='user_list'),
+#     path('user_data_input/', views.UserDataInput.as_view(), name='user_data_input'),
+#     path('user_data_confirm/', views.UserDataConfirm.as_view(), name='user_data_confirm'),
+#     path('user_data_create/', views.UserDataCreate.as_view(), name='user_data_create'),
+# ]

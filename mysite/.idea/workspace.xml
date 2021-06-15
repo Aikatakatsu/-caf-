@@ -28,13 +28,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/analysis/templates/analysis" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/pythonProject5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Owner\Documents\GitHub\-caf-\mysite\analysis\templates\analysis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\Documents\GitHub\-caf-\mysite\analysis\templates\register" />
       <recent name="C:\Users\Owner\Documents\GitHub\-caf-\mysite\analysis\templates\registration" />
     </key>
   </component>
@@ -54,7 +55,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/mysite/urls.py</url>
-          <line>8</line>
+          <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
