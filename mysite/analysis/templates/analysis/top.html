@@ -3,25 +3,19 @@
 
 <div class="content-wrapper">
     <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">ログイン画面</li>
+        </ol>
+
         <!-- Example DataTables Card-->
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fa fa-server"></i>
-                <h3><b>アドナビ！</b></h3>
-                <p>会員の方はログインをしてください．ログインをしたことのない方は新規登録をおねがいします．</p>
+                <b>ログイン・新規登録</b>
             </div>
             <div class="card-body">
-                 <div class="col text-center">
-                    <a class="btn btn-primary" href="{% url 'analysis:analysis_update' pk=280 %}">会員ログイン</a><br><!--このpk=280は適当-->
-                    <a class="btn btn-primary" href="{% url 'analysis:analysis_list'%}">管理ログイン</a><br>
-                    <a class="btn btn-danger" href="{% url 'analysis:register_create'%}">新規登録</a><br>
-                 </div>
-
-<style>
-    .btn{
-    width: 40%;
-    margin: 10px;
-    text-align: center;
-    };
-</style>
+                <a class="btn btn-primary" href="https://google.com">会員ログイン</a>
+                <a class="btn btn-primary" href="{% url 'analysis:analysis_list'%}">管理ログイン</a>
+                <a class="btn btn-danger" href="{% url 'analysis:analysis_create'%}">新規登録</a>
 {% endblock content %}
